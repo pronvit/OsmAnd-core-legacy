@@ -1927,7 +1927,7 @@ void simplifyAreaRouteWay(vector<CombineAreaRoutePoint>& routeWay, vector<Combin
                 if (segmentLineBelongsToPolygon(p, n, originalWay)) {
                     double ndist = squareRootDist31(p.x31, p.y31, n.x31, n.y31);
                     if (ndist > dist) {
-                        ndist = dist;
+                        dist = ndist;
                         connectStart = i;
                         connectLen = length;
                     }
